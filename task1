@@ -1,1 +1,58 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+    <h1>HEY THERE👋</h1>
+    <h3>This is GARGI SINGH</h3>
+    <img src="https://i.pinimg.com/736x/eb/46/55/eb4655b7ea8c77e911a65e6cb8656d26.jpg" height="200px" width="200px">
+</head>
+    <h2>Contact Info:</h2>
+    <ul>
+        <li>Phone: 123-456-7890</li>
+        <li>Email: gargisinghmarch@gmail.com</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/gargi-singh-74b840332">LinkedIn</a></li>
+    </ul>
+    <h2>About Me:</h2>
+    <p>Gargi Singh, 
+        I am a 2nd year B.Tech CSE student at GLA University, Mathura.
+        A passionate web developer with a keen interest in back-end development. She enjoys learning new technologies and improving her skills in front-end development.</p>
+        <table style="<table style="border:1px solid black; border-collapse:collapse; width:80%;">
+  <tr>
+    <th style="border:1px solid black; padding:8px;">Year</th>
+    <th style="border:1px solid black; padding:8px;">Degree</th>
+    <th style="border:1px solid black; padding:8px;">Institute</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid black; padding:8px;">2024</td>
+    <td style="border:1px solid black; padding:8px;">B.Tech in CSE</td>
+    <td style="border:1px solid black; padding:8px;">GLA University, Mathura</td>
+  </tr>
+</table>
+<h2>Skills:</h2>
+<ul>
+    <li>HTML<progress value="80" max="100"></progress></li>
+    <li>CSS<progress value="30" max="100"></progress></li>
+    <li>JavaScript <progress value="70" max="100"></progress></li>
+    <li>Python<progress value="60" max="100"></progress></li>
+    <li>Java<progress value="50" max="100"></progress></li>
+</ul>
+<div style="background-color:lightgrey; padding:10px; border-radius:5px;">
+    <h4>Projects:</h4>
+    <p>working with backend ;
+        still learning!
+    </p>
+</div>
+<h4>Hobbies:
+    <ul>
+        <li>🎨 Painting/Sketching</li>
+        <li>🧳 Traveling</li>
+    </ul>
+</h4>
+<footer style="text-align:center; margin-top:20px;">
+    <p>&copy; 2025 Gargi Singh. All rights reserved.</p>
+<body>
+    
+</body>
+</html>
