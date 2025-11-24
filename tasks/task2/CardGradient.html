@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-flow: row wrap;
+            background: linear-gradient(45deg,cyan, violet);
+            background-repeat: no-repeat;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            perspective: 1000;
+        }
+
+        #card_front{
+            position: absolute;
+            display: flex;
+            height:200px;
+            width: 150px;
+            background: linear-gradient(135deg, red, violet);
+            border-radius: 25px;
+            z-index:1;
+            transition: all 1s ease;
+        }
+
+        #card_back{
+            position: absolute;
+            display: flex;
+            height:200px;
+            width: 150px;
+            background: linear-gradient(135deg, rgb(0, 162, 255), rgb(10, 132, 12));
+            border-radius: 25px;
+            z-index: 2;
+        }
+        #card_front:hover{
+            transform:rotateY(180deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="card_front"></div>
+    <div id="card_back"></div>
+</body>
+</html>
