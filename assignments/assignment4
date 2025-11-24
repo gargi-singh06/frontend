@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Filter</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        background: #f3f3f3;
+    }
+
+    .container {
+        width: 500px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .btns button {
+        padding: 10px 15px;
+        border: none;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 15px;
+        margin-right: 5px;
+    }
+
+    #search {
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        background: #eef4ff;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Interactive Product Filter</h2>
+
+    <div class="btns">
+        <button id="allBtn">All</button>
+        <button id="elecBtn">Electronics</button>
+        <button id="clothBtn">Clothing</button>
+    </div>
+
+    <input id="search" type="text" placeholder="Search products...">
+
+    <ul id="productList"></ul>
+</div>
+
+<script>
+    const products = [
+        { name: "Laptop", category: "electronics" },
+        { name: "Headphones", category: "electronics" },
+        { name: "Smartphone", category: "electronics" },
+        { name: "T-Shirt", category: "clothing" },
+        { name: "Jeans", category: "clothing" },
+        { name: "Jacket", category: "clothing" },
+        { name: "Novel Book", category: "books" },
+        { name: "History Book", category: "books" },
+        { name: "Smartwatch", category: "electronics" },
+        { name: "Hoodie", category: "clothing" }
+    ];
+
+    const list = document.getElementById("productList");
+    const allBtn = document.getElementById("allBtn");
+    const elecBtn = document.getElementById("elecBtn");
+    const clothBtn = document.getElementById("clothBtn");
+    const searchInput = document.getElementById("search");
+
+    function displayProducts(arr) {
+        list.innerHTML = "";
+        arr.forEach(p => {
+            const li = document.createElement("li");
+            li.textContent = p.name + " (" + p.category + ")";
+            list.appendChild(li);
+        });
+    }
+
+    displayProducts(products);
+
+    allBtn.addEventListener("click", () => {
+        displayProducts(products);
+        searchInput.value = "";
+    });
+
+    elecBtn.addEventListener("click", () => {
+        const filtered = products.filter(p => p.category === "electronics");
+        displayProducts(filtered);
+        searchInput.value = "";
+    });
+
+    clothBtn.addEventListener("click", () => {
+        const filtered = products.filter(p => p.category === "clothing");
+        displayProducts(filtered);
+        searchInput.value = "";
+    });
+
+    searchInput.addEventListener("input", () => {
+        const key = searchInput.value.toLowerCase();
+        const filtered = products.filter(p => p.name.toLowerCase().includes(key));
+        displayProducts(filtered);
+    });
+</script>
+
+</body>
+</html>
