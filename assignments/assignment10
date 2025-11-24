@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Showcase</title>
+  <style>
+    :root {
+      --primary: #d5d7eeba;
+      --sidebar-bg: #babbec;
+      --accent: #1a1c54e7;
+      --danger: #317b31;
+      --text: #3a4420e7;
+      --card-bg: #acbc81;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--primary);
+      display: flex;
+      max-height: 100vh;
+    }
+
+    /* ===== Sidebar ===== */
+    .sidebar {
+      background: var(--sidebar-bg);
+      color: #ff0000;
+      width: 250px;
+      min-height: 100vh;
+      padding: 1.5rem;
+      position: sticky;
+      top: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 1.5rem;
+      color: #000000;
+      margin-bottom: 1.5rem;
+      border-bottom: #000000 solid 2px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      font-size: 1rem;
+      margin: 1rem 0;
+      
+    }
+
+    a{
+      display: inline-block;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      text-decoration: none;
+      color: #000000;
+      transition: all 0.3s ease;
+      border-radius: 1rem
+    }
+
+    .sidebar ul li a:hover {
+      color: #000;
+      background-color: #f8f48db6;
+    }
+
+    /* ===== Main Content ===== */
+    .content {
+      flex: 1;
+      padding: 2rem;
+      height: full;
+      overflow-y: scroll;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 2rem;
+      color: var(--accent);
+      text-shadow: #3a442056 -1px 0px 10px ;
+    }
+
+    /* ===== Product Cards ===== */
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgb(0, 0, 0);
+      max-width: 280px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 1rem 0 0.5rem;
+      color: var(--text);
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      padding: 0 1rem;
+      color: #323a1de7;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.7rem 1.2rem;
+      background: var(--danger);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: #22600a;
+    }
+
+   
+
+    /* ===== Responsive ===== */
+    @media (max-width: 900px) {
+      .blog-card {
+        max-width: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        min-height: auto;
+        position: relative;
+        text-align: center;
+      }
+
+      .sidebar ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .blog-card {
+        max-width: 100%;
+      }
+
+      .card {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>OUTLYN</h2>
+    <ul>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#blogs">Blogs</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- Products Section -->
+    <h1 id="products" class="section-title">Our Products</h1>
+    <div class="products">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Product">
+        <h3>Modern Sneakers</h3>
+        <p>Comfortable and stylish sneakers for everyday wear.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1637412173653-de70428ee3ce?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product">
+        <h3>Smart Watch</h3>
+        <p>Track your health and stay connected with ease.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1592921870789-04563d55041c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product">
+        <h3>Wireless Earbuds</h3>
+        <p>Experience crisp sound quality with noise cancellation.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+</body>
+</html>
