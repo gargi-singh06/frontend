@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=MedievalSharp&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Quicksand;
+            margin: 0;
+            background: radial-gradient(circle,var(--bg),var(--accent));
+        }
+        :root {
+            --bg:#ADE8F4;
+            --accent:#0077B6;
+            --text:#03045E;
+            --border:#054b64;
+        }
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #name {
+            color:var(--text);
+        }
+
+        #tagline {
+            color:var(--text);
+        }
+        #profile {
+            width: 8em;
+            border-radius: 8em;
+            border-style: groove;
+            border-color:var(--border);
+            transition: all 0.2s;
+        }
+        #profile:hover {
+        }
+        #profile:active {
+            display: flex;
+            align-items: center;
+            transform: scale(3) translateY(20px);
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <h1 class="header-container" id="name">LUCKY SHARMA</h1>
+        <h3 class="header-container" id="tagline">"Perfectionist Final Boss!"</h3>
+        <section class="profile">
+            <img class="profile" id="profile" src="https://th.bing.com/th/id/OIP.ZO2UnkvC5wL3-vo0FeHfdgHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="profile">
+        </section>
+    </header>
+    <section>
+        <h2><u>Contact Details</u>:</h2>
+        <section>
+            <dl>
+                <li><b>Email =></b> luckysharma0729@gmail.com</li>
+                <li><b>Phone =></b> 7********2</li>
+                <li><b>LinkedIn =></b> <a href="https://www.linkedin.com/in/laksh-sharma-2765bb311/">Rajma Chaawal</a></li>
+                <li><b>Instagram =></b> <a href="https://www.instagram.com/rajma.chaawalll/?__pwa=1#">sketch_sketchposting</a></li>
+            </dl>
+            <section>
+                <h2><u>About Me</u>:</h2>
+                <section>
+                    <p>~ As a <b>Full-stack Developer</b>, I bring a unique blend of  <u>technical</u> expertise and <u>artistic</u> sensibility to my work. My background in art, combined with a meticulous eye for detail, drives me to create applications that are not just functional but also aesthetically flawless.</p>
+                    <p>~ My <i>passion</i> lies in crafting <i>elegant and intuitive</i> <b>UI/UX</b> that seamlessly integrates artistic design with robust functionality. <p></p><b> ~ "I take pride in building full-stack solutions from the ground up."</b></p>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section>
+         <h2><u>Education Details</u>:</h2>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td>2028</td>
+                    <td>B.Tech in CSE</td>
+                    <td>GLA University</td>
+               </tr>
+                <tr>
+                    <td>2023-24</td>
+                    <td>Intermediate</td>
+                    <td>St. Andrews School</td>
+                </tr>
+            </tbody>
+        <tfoot></tfoot>
+            </table>
+        </section>
+    </section>
+    <section>
+        <h2><u>Skills</u>:</h2>
+        <section>
+            <ul>
+                <li><b>Frontend Development:</b> React.js, Angular.js, HTML5, CSS3, JavaScript (ES6+), Tailwind CSS, Bootstrap</li>
+                <li><b>Backend Development:</b> Node.js, Python (Django, Flask), Ruby on Rails, PHP, RESTful APIs</li>
+                <li><b>Databases:</b> MongoDB, MySQL, PostgreSQL, Firebase</li>
+                <li><b>UI/UX & Design:</b>Adobe XD, Sketch, Photoshop, Prototyping</li>
+                <li><b>Version Control:</b> Git, GitHub, GitLab</li>
+                <li><b>Tools & Platforms:</b> npm, Yarn, Webpack, Babel, Docker, Heroku, AWS, Netlify</li>
+                <li><b>Soft Skills:</b>Artistic Eye, Attention to Detail, Problem-Solving, Communication, Project Management, Team Collaboration</li>
+            </ul>
+        </section>
+    </section>
+    <section>
+        <h2><u>Projects</u>:</h2>
+            <ol>
+                <li><h4>Watch Party website: </h4><section>
+                <p>Built a watch party web application with a <b>React.js</b> front-end and a <b>Socket.io</b> back-end, enabling users to create and join private rooms. Integrated a <b>real-time chat feature</b> and a <b>media player with synchronized play, pause, and seek functionality</b>, ensuring a seamless collaborative viewing experience.</p></li>
+                <li><h4>Art Collection website: </h4><section><p>Designed and developed an online art gallery application featuring user profiles, artist portfolios, and a searchable collection database. Utilized <b>React Hooks</b> for state management and <b>Firebase</b> for backend services, including <b>secure user authentication</b> and <b>image storage</b>. The site’s intuitive UI allows for easy browsing, filtering, and uploading of art pieces.</p></section></li>
+                <li><h4>IMDB Clone: </h4><section><p>Engineered a single-page application that mimics the core features of IMDb, including a comprehensive search engine and detailed movie/TV show pages. Consumed data from a <b>public movie API</b> and used <b>Redux</b> for centralized state management. The application features <b>lazy loading</b> to optimize performance and a <b>responsive design</b> for a consistent user experience on all devices.</p></section></li>
+            </ol>
+    </section>
+    
+    
+    
+    <section>
+        <h2><u>Hobbies</u>:</h2>
+        <section>
+            <ul>
+                <li>Making Sketches and Portraits!</li>
+                <li>Watching Movies!</li>
+                <li>Studying Theoritical Astronomy Books!</li>
+                <li>Stargazing!</li>
+            </ul>
+        </section>
+    </section>
+
+
+    <footer>
+        <p><i>Thank you for visiting my CV! Feel free to reach out if you have any questions or opportunities!</i>
+        <br><b> | &copy;2025 Lucky Sharma. All Rights Reserved. | </b></p>
+    </footer>
+</body>
+</html>
