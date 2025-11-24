@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Post Loader</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        background: #f3f3f3;
+        text-align: center;
+    }
+
+    .box {
+        width: 450px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    li {
+        background: #eef4ff;
+        padding: 10px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        font-size: 17px;
+    }
+
+    button {
+        padding: 10px 18px;
+        background: #007bff;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Post Loader</h2>
+
+    <div id="status">Loading posts...</div>
+    <ul id="postList"></ul>
+
+    <button id="retryBtn" style="display:none;">Retry</button>
+</div>
+
+<script>
+    const statusDiv = document.getElementById("status");
+    const list = document.getElementById("postList");
+    const retryBtn = document.getElementById("retryBtn");
+
+    function loadPostsPromise() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const success = Math.random() > 0.3;
+                if (success) {
+                    resolve([
+                        "How to Learn JavaScript",
+                        "Understanding Async/Await",
+                        "Why DOM Manipulation Matters",
+                        "Frontend Roadmap 2025",
+                        "Mastering CSS Flexbox"
+                    ]);
+                } else {
+                    reject("Failed to load posts.");
+                }
+            }, 2000);
+        });
+    }
+
+    async function loadPosts() {
+        statusDiv.textContent = "Loading posts...";
+        retryBtn.style.display = "none";
+        list.innerHTML = "";
+
+        try {
+            const posts = await loadPostsPromise();
+            statusDiv.textContent = "Posts Loaded:";
+            posts.forEach(p => {
+                const li = document.createElement("li");
+                li.textContent = p;
+                list.appendChild(li);
+            });
+        } catch (error) {
+            statusDiv.textContent = error;
+            retryBtn.style.display = "inline-block";
+        }
+    }
+
+    retryBtn.addEventListener("click", loadPosts);
+
+    loadPosts();
+</script>
+
+</body>
+</html>
