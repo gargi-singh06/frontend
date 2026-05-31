@@ -1,16 +1,72 @@
-# React + Vite
+# 🔐 Live Password Strength Checker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based Password Strength Checker that provides real-time feedback on password security. The application evaluates the password as the user types, displays a color-coded strength indicator, generates strong password suggestions, and allows users to toggle password visibility.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### ✅ Real-Time Password Strength Analysis
+Evaluates passwords based on:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Uppercase letters (A-Z)
+- Lowercase letters (a-z)
+- Numbers (0-9)
+- Special characters (~!@#$%^&*()_)
+- Password length
 
-## Expanding the ESLint configuration
+### 🎨 Color-Coded Strength Indicator
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Strength | Color |
+|-----------|--------|
+| Weak | 🔴 Red |
+| Medium | 🟡 Yellow |
+| Strong | 🟢 Green |
+
+### 😎 Visual Feedback
+
+Uses icons to indicate password strength:
+
+- ⚠️ Weak Password
+- 🛡️ Medium Password
+- ✅ Strong Password
+
+### 👁️ Show / Hide Password
+
+Users can toggle password visibility using an eye icon inside the input field.
+
+### 🔑 Strong Password Generator
+
+Generates a secure random password containing:
+
+- Uppercase letters
+- Lowercase letters
+- Numbers
+- Special characters
+
+### ⚡ Live Updates
+
+Password strength updates instantly as the user types.
+
+---
+
+## 🛠️ Tech Stack
+
+- React.js
+- JavaScript (ES6+)
+- CSS3
+- React Hooks (`useState`)
+- React Icons
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+│
+├── App.jsx
+├── App.css
+├── assets/
+│
+└── main.jsx
